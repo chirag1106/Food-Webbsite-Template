@@ -48,10 +48,6 @@ body {
   width: 100%;
 }
 
-.main {
-  min-height: 80rem;
-}
-
 .img-fluid {
   width: 1.9rem;
   height: 1.9rem;
@@ -96,7 +92,7 @@ body {
 
 .header-body {
   justify-content: space-between;
-  margin-top: 15rem;
+  margin-top: 17rem;
 }
 
 .cooking {
@@ -205,45 +201,8 @@ body {
   margin-top: 6.3rem;
 }
 
-@media screen and (min-width: 420px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 .card {
   width: 100%;
-  min-height: 33.7rem;
   max-width: 100%;
 }
 
@@ -387,10 +346,104 @@ body {
 }
 
 .trending-items {
-  border: 1px solid #000;
   width: 100%;
   margin-top: 12.2rem;
-  height: 41rem;
+}
+
+.trending-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 4rem;
+  line-height: 2rem;
+  height: 3.6rem;
+  text-align: center;
+  letter-spacing: -0.012em;
+
+  color: #000000;
+}
+
+.product-carousel {
+  margin-top: 3.75rem;
+  width: 100%;
+}
+
+.carousel {
+  padding: 0 12.3rem;
+  width: 100%;
+}
+
+.card:hover {
+  filter: drop-shadow(0px 6px 40px rgba(0, 0, 0, 0.14));
+  box-shadow: 0px 0px 1px rgba(187, 187, 187, 0.25);
+  transition: 0.3s ease;
+}
+
+.owl-carousel .owl-item img {
+  display: inherit !important;
+  width: auto !important;
+}
+
+.owl-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.owl-prev,
+.owl-next {
+  width: 7.15rem;
+  height: 7.15rem;
+  border-radius: 50% !important;
+
+  border: 0.3rem solid #1ac073 !important;
+  position: relative;
+}
+
+.container__triangle--left {
+  border-color: transparent #1ac073 transparent transparent;
+  border-width: 8px 8px 8px 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: block;
+}
+
+.container__triangle--right {
+  border-color: transparent transparent transparent #1ac073;
+  border-width: 8px 0px 8px 8px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: block;
+}
+.container__triangle--right:hover {
+  border-color: transparent transparent transparent #ffffff;
+}
+.container__triangle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  border-style: solid;
+  width: 0;
+  height: 0;
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: #1ac073 !important;
+  color: #fff;
+  text-decoration: none;
+  border-color: transparent #ffffff transparent transparent;
+  filter: drop-shadow(4px 5px 20px rgba(0, 0, 0, 0.2));
+}
+.owl-theme .owl-nav [class*="owl-"]:hover .container__triangle--left {
+  border-color: transparent #ffffff transparent transparent;
+}
+.owl-theme .owl-nav [class*="owl-"]:hover .container__triangle--right {
+  border-color: transparent transparent transparent #ffffff;
 }
 
 .request-dish {
@@ -507,8 +560,16 @@ body {
   border-radius: 0.5rem;
 }
 
-.video-div:hover ~ #play-pause {
+/* .video-div:hover #play-pause {
   display: block !important;
+} */
+
+.green-color {
+  background-color: #c7eacc;
+  height: 30.8rem;
+  width: 100%;
+  z-index: -1;
+  margin-top: -30.8rem;
 }
 
 .row-contact {
@@ -694,6 +755,42 @@ body {
   border-radius: 20px;
 }
 
+@media screen and (min-width: 420px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media screen and (max-width: 1400px) {
   html {
     font-size: 62.5%;
@@ -797,6 +894,13 @@ body {
 
   .service {
     padding: 0;
+  }
+
+  .carousel {
+    padding: 0 3rem;
+  }
+  .owl-nav {
+    display: none;
   }
 }
 

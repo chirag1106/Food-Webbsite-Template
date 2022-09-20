@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&family=Squada+One&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&family=Squada+One&display=swap";
 
 * {
   margin: 0;
@@ -63,6 +63,10 @@ body {
   line-height: 2rem;
   letter-spacing: -0.012em;
   color: #fff;
+}
+
+.main{
+    min-height: 80rem;
 }
 
 .menu {
@@ -170,6 +174,21 @@ body {
   border-radius: 0 1rem 1rem 0;
   outline: none;
   border: none;
+
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 1.6rem;
+line-height: 2rem;
+/* identical to box height, or 125% */
+
+letter-spacing: -0.012em;
+
+/* White */
+
+color: #FFFFFF;
+cursor: pointer;
+
 }
 
 .row-kitchen {
@@ -299,6 +318,49 @@ body {
   border-radius: 0.5rem;
   max-width: 100%;
   height: auto;
+}
+.minus-img {
+  width: 2.2rem;
+  height: 2rem;
+  background: #f3ba00;
+  border-radius: 0.5rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.minus-border{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.plus-border{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.extend{
+  width: 4.1rem;
+min-height: 2.5rem;
+/* left: 26px;
+top: 0px; */
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 1.5rem;
+line-height: 2rem;
+/* or 133% */
+
+padding-top: 0.1rem;
+letter-spacing: -0.012em;
+
+color: #000000;
+text-align: center;
+
+background: #FFFFFF;
+border-width: 0.2rem 0;
+border-style: solid;
+border-color: #F3BA00
 }
 
 .price-rating {
@@ -753,6 +815,158 @@ body {
   left: 5.2rem;
   background: #f7f8fa;
   border-radius: 20px;
+  display: none;
+  position: relative;
+}
+
+.cart-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 10rem);
+}
+
+.cart-modal-img{
+    width: 19.7rem;
+height: 22.5rem;
+filter:invert(7%);
+display: block;
+margin: auto;
+
+}
+
+.cart-head{
+    margin-top: 5.5rem;
+    /* height: 6.9rem; */
+    width: 100%;
+    /* border: 1px solid black; */
+
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 4rem;
+line-height: 2rem;
+/* or 50% */
+
+letter-spacing: -0.012em;
+
+color: #000000;
+text-align: center;
+
+
+}
+
+.cart-sub-head{
+    margin-top: 2.5rem;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 2.4rem;
+line-height: 2rem;
+/* or 83% */
+
+letter-spacing: -0.012em;
+
+color: #AAA7A7;
+text-align: center;
+}
+
+.cart-modal-btn{
+    display: block;
+    margin: auto;
+    margin-top: 5.5rem;
+}
+
+/* Dish Modal */
+.dish-modal {
+  position: absolute;
+  top: 10.7rem;
+  width: calc(100% - 10.4rem);
+  min-height: 64.7rem;
+  left: 5.2rem;
+  background: #f7f8fa;
+  border-radius: 20px;
+  display: none;
+}
+
+.req-dish-head{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 800;
+font-size: 4rem;
+line-height: 2rem;
+/* identical to box height, or 50% */
+
+letter-spacing: -0.012em;
+
+color: #000000;
+margin-top: 8.7rem;
+text-align: center;
+}
+
+.dish-input-frame{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 14rem);
+    /* margin: auto; */
+    margin: 11rem auto;
+    min-height: 19.2rem;
+    /* border: 1px solid black; */
+    padding: 0 3.5rem;
+}
+
+.label-text{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 1.6rem;
+line-height: 1.9rem;
+
+color: #474747;
+
+}
+
+.name-input{
+    width : 100%;
+    background: #F2F2F2;
+border-radius: 10px;
+height: 4.8rem;
+border: none;
+outline: none;
+padding: 1.6rem;
+margin-top: 0.7rem;
+}
+
+.group-margin{
+    margin-top: 3.7rem;
+}
+
+.input-btn{
+    margin-top: 12.5rem;
+}
+
+.cancel-btn{
+    padding: 1.9rem 2.5rem;
+/* gap: 10px; */
+
+width: 21rem;
+height: 5.8rem;
+
+border: 0.2rem solid #1AC073;
+border-radius: 1rem;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 1.6rem;
+line-height: 2rem;
+/* identical to box height, or 125% */
+
+letter-spacing: -0.012em;
+
+color: #1AC073;
+
 }
 
 @media screen and (min-width: 420px) {
@@ -836,7 +1050,7 @@ body {
     height: auto;
   }
 
-  .submit-btn {
+  .submit-btn, .cancel-btn {
     width: 100%;
   }
 
@@ -902,6 +1116,10 @@ body {
   .owl-nav {
     display: none;
   }
+
+  .dish-input-frame{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -918,4 +1136,12 @@ body {
     width: 100%;
     font-size: 2rem;
   }
+
+  .dish-modal, .cart-modal{
+    width: calc(100% - 5.4rem);
+    /* min-height: 64.7rem; */
+    left: 2.7rem;
+  }
 }
+
+
